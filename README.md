@@ -1,1 +1,96 @@
-# ss-ww-ee
+# Playa Escondida Full Live System
+
+This package is a full live-system scaffold:
+- bilingual UI (English / Español selector)
+- real Supabase-ready auth
+- login and signup pages
+- protected owner and admin pages
+- listings from database or starter fallback
+- per-listing owner login ID and password demo fields
+- range date selection on property calendars
+- booking creation flow
+- booking total calculator
+
+## Run locally
+```bash
+npm install
+npm run dev
+```
+
+## Build
+```bash
+npm run build
+```
+
+## Supabase setup
+1. Create a Supabase project.
+2. Copy `.env.example` to `.env`.
+3. Add:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+4. In Supabase SQL Editor run:
+   - `supabase/schema.sql`
+   - `supabase/seed.sql`
+
+## Signup
+Use `/signup` to create:
+- guest accounts
+- owner accounts
+- admin accounts
+
+## Login
+Use `/login` for real sign-in through Supabase Auth.
+
+## Important
+The per-listing owner login ID and password shown on property pages are demo owner access fields stored on the property record. Real owner authentication is handled through Supabase Auth accounts and the `owner_properties` table.
+
+
+## Airbnb-level calendar upgrade
+- 2-month calendar layout
+- interval selection / auto-range selection
+- blocked dates support
+- start date + end date logic
+- full in-between highlighting
+- live nights and total pricing
+- optional add-ons inside the booking summary
+
+
+Auto-range fix: clicking the first date sets check-in, clicking the second later date sets checkout, and hovering before the second click previews the full interval like Airbnb.
+
+
+## Interactive mascot
+- clickable floating Saul Playa mascot
+- opens contact panel
+- WhatsApp shortcut
+- Email shortcut
+- quick link to listings
+
+
+Range behavior fixed again with a simplified picker: first click starts, hover previews, second click finishes, and a third click starts a new range.
+
+
+Main homepage welcome image updated to the new cartoon beach scene with Saul mascot.
+
+
+Header fixed: restored LISTINGS tab, added SALE / UNIDADES EN VENTA tab, combined SIGN IN / SIGN UP into one tab/page, and forced all menu wording to uppercase.
+
+
+Calendar fixed: replaced with a more stable range-selection component with proper first-click start date, second-click end date, hover preview, blocked-date checks, and clearer highlighting.
+
+
+Calendar range mode strengthened: explicit first-click check-in, second-click checkout, automatic in-between selection, and clearer on-screen instructions.
+
+
+Luxury header upgrade added: mega dropdown menus, hover animations, sticky shrinking effect on scroll, and glowing call button.
+
+
+Translation fix: language selector now changes the luxury header, mega menus, About page, Contact page, and Login / Sign Up page instead of staying only in English.
+
+
+Next-level header polish added: center-aligned luxury navigation, animated underline on hover, active page highlight, and improved balanced spacing.
+
+
+Elite header upgrade: transparent-to-solid scroll behavior, stronger luxury shadows, enhanced glowing call button, and floating WhatsApp conversion button.
+
+
+OUR LISTINGS separated from rentals: now points to a dedicated for-sale real estate page with no calendar and includes key sales details like bedrooms, bathrooms, square meters, square feet, parking, view, and sale price.
